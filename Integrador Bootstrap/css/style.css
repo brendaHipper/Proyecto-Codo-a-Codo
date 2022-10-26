@@ -214,6 +214,47 @@ textarea, #btnForm {
     width: 350px;
 }
 
+/* ESTILOS FORMULARIO CON FUNCIONALIDAD JS*/
+#tickets {
+    margin: 2%;
+    padding-left: 0%;
+}
+
+#cards-tickets {
+    /* margin: 5%; */
+    padding-left: 15%;
+}
+
+#cards-tickets, .card-title, .card-text, p {
+    text-align: center;
+}
+
+.card-body, #colorBorde {
+    border-color: #4799F0;
+}
+
+.card-body, #colorBordeMostaza {
+    border-color: #F6C530;
+}
+
+/*Estilos boton del formulario*/
+#btnResumen, #btnBorrar {
+    background: #96C93E;
+    color: #fff;
+    width: 100%;
+}
+
+.form-control .importeAbonar {
+    height: 50px;
+}
+
+#importeAbonar{
+    padding: 2%;
+    height: 60px;
+    background-color: #CCE5FF;
+    color: #206AAB;
+} 
+
 /* ESTILOS PARA FOOTER*/
 .container-fluid.foot {
     height: 90px;

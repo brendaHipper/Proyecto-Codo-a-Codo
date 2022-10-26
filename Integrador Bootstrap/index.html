@@ -36,7 +36,8 @@
                     <a class="nav-link" href="#formulario">Conviértete en orador</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" id="linkVenta">Comprar tickets</a>
+                    <a class="nav-link" id="linkVenta" href="#compra">Comprar tickets</a>
+                    <!-- <a class="nav-link disabled" id="linkVenta" href="#compra">Comprar tickets</a> -->
                   </li>
                 </ul>
               </div>
@@ -154,6 +155,89 @@
       <!-- <p id="notaForm">Recuerda incluir un título para tu charla</p> -->
       <button type="button" id="btnForm">Enviar</button>
     </div>
+    <hr>
+    <!--Contenedor para Compra de Tickets con funcionalidad JS-->
+    <section class="compraTickets">
+      <div id="cajaContenido">
+        <div id="cards-tickets">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card rounded-0" style="border-color: #248FFF">
+                <div class="card-body">
+                  <h5 class="card-title">Estudiante</h5>
+                  <p class="card-text">Tienen un descuento.</p>
+                  <h5 class="card-title">%80</h5>
+                  <p>*presentar documentación</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card rounded-0" style="border-color: #20A6BB">
+                <div class="card-body">
+                  <h5 class="card-title">Trainee</h5>
+                  <p class="card-text">Tienen un descuento.</p>
+                  <h5 class="card-title">%50</h5>
+                  <p>*presentar documentación</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card rounded-0" style="border-color: #FFC719">
+                <div class="card-body">
+                  <h5 class="card-title">Junior</h5>
+                  <p class="card-text">Tienen un descuento.</p>
+                  <h5 class="card-title">%15</h5>
+                  <p>*presentar documentación</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="container formulario" id="tickets" method="POST">
+            <span id="compra">VENTA</span>
+            <h2 id="formulario">VALOR DE TICKET $200</h2>
+            <form action="#" method="POST" class="row g-3 needs-validation" id="formtickets">
+              <div class="col-md-6 position-relative">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                <label id="mensajeNombre"></label>
+              </div>
+              <div class="col-md-6 position-relative">
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+                <label id="mensajeApellido"></label>
+              </div>
+              <div class="col-md-12 position-relative">
+                <input type="text" class="form-control" id="email" name="correo" placeholder="Correo">
+                <label id="mensajeCorreo"></label>
+              </div>
+              <!--Datos para calcular el precio de las entradas-->
+              <div class="col-md-6 position-relative" id="labelForm">
+                <label for="validationTooltip02" class="form-label">Cantidad</label>
+                <!-- <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"> -->
+                <input type="number" class="form-control" id="cantidad" name="cantidad">
+                <label id="mensajeCantidad"></label>
+              </div>
+              <div class="col-md-6 position-relative" id="labelForm">
+                <label for="validationTooltip04" class="form-label">Categoria</label>
+                <select class="form-select col-md-6 position-relative" id="opciones" name="opciones">
+                  <option value="0" id="estudiante" name="estudiante">Estudiante</option>
+                  <option value="1" id="trainee" name="trainee">Trainee</option>
+                  <option value="2" id="junior" name="junior">Junior</option>
+                </select>
+              </div>
+              <div class="col-md-12 position-relative">
+                <textarea type="hidden" class="form-control" id="importeAbonar" rows="3"></textarea>
+              </div>
+              <div class="col-md-6 position-relative">
+                <button type="button" id="btnBorrar" class="btn btn-lg borrar" value="borrar" onclick="eliminar();">Borrar</button>
+              </div>
+              <div class="col-md-6 position-relative">
+                <button type="button" id="btnResumen" class="btn btn-lg" value="Resumen" onclick="validar();">Resumen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+      
+    </section>
     <!--Contenedor para el Footer -->
     <div class="container-fluid foot">
       <a class="linksFooter">Preguntas Frecuentes</a>
@@ -165,6 +249,7 @@
       <a class="linksFooter">Estudiantes</a>
     </div>
     <!--Link a JavaScript-->
+    <script type="text/javascript" src="js/tickets.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
